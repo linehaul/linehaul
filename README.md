@@ -3,7 +3,9 @@
 ## Development Guide
 
 ### Building
-go build -o release/linehaul linehaul
+````
+    ./build.sh
+````
 
 ### Updating GoDeps
 To update the go dependencies, use:
