@@ -1,0 +1,18 @@
+workspace:
+  base: /go
+  path: src/github.com/${DRONE_REPO}
+
+pipeline:
+    run_go_build:
+        image: golang:${GOVER}
+        commands:
+            - mkdir -p release
+            - echo go build -o release/${GOOS}/${GOARCH}/${DRONE_REPO} github.com/${DRONE_REPO}
+
+matrix:
+    include:
+        -   GOVER: 1.6
+            GOOS: linux
+            GOARCH: amd64
+            CGO_ENABLED: 0
+            GO15VENDOREXPERIMENT: 1
