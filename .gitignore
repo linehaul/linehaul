@@ -1,0 +1,9 @@
+# Misc
+.DS_Store
+thumbs.db
+*.bak
+*.log
+*.tmp
+
+# Golang
+release
