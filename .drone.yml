@@ -6,7 +6,8 @@ pipeline:
     run_go_build:
         image: golang:${GOVER}
         commands:
-            - mkdir -p release
+            - go get -u github.com/kardianos/govendor
+            - govendor sync
             - echo go build -o release/${GOOS}/${GOARCH}/${DRONE_REPO} github.com/${DRONE_REPO}
 
 matrix:

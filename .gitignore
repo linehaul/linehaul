@@ -7,3 +7,7 @@ thumbs.db
 
 # Golang
 release
+
+# Vendor Actuals
+vendor/**/*
+!vendor/vendor.json
