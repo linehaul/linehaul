@@ -5,8 +5,10 @@ thumbs.db
 *.log
 *.tmp
 
-# Golang
+# Golang Outputs
 release
+linehaul
+!./linehaul/*
 
 # Vendor Actuals
 vendor/**/*
